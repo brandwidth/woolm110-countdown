@@ -71,7 +71,7 @@ class CountdownTimer
   /**
    * @var string
    */
-  private $fontPath = 'fonts/';
+  private $fontPath;
 
   /**
    * @var int
@@ -133,6 +133,8 @@ class CountdownTimer
    */
   public function __construct($settings)
   {
+    $this->fontSize = __DIR__ . '/fonts/';
+
     $this->width = $settings['width'];
     $this->height = $settings['height'];
     $this->boxColor = $settings['boxColor'];
